@@ -117,12 +117,9 @@ int main()
 
     while(true){
         show_list();
-
         cout<<"Please, enter a valid keyword from the given list: ";
         cin>>cmd;
-
         if(cmd == 0) break;
-
         perform(arr);
         clear_screen();
     }
