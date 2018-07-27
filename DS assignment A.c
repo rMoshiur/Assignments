@@ -129,12 +129,9 @@ int main()
 
     while(1){
         show_list();
-
         printf("Please, enter a valid keyword from the given list: ");
         scanf("%d", &cmd);
-
         if(cmd == 0) break;
-
         perform(arr);
         clear_screen();
     }
