@@ -25,6 +25,7 @@ void Insert(int* ar){
     cout<<"Please, enter a integer type data to be inserted: ";
     int x; cin>>x;
     ar[++n] = x;
+    cout<<ar[n]<<" is inserted successfully!"<<endl;
 }
 
 void Search(int* ar){
