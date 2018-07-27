@@ -1,3 +1,9 @@
+/*
+Name: MD. Moshiur Rahman
+ID: 1602022
+Level-2 Semester-I
+*/
+
 #include<stdio.h>
 #include<string.h>
 
