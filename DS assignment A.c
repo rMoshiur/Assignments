@@ -9,7 +9,7 @@ Level-2 Semester-I
 
 #define mxn 1000000
 
-int cmd=1, n = 0;
+int i, j, cmd, n = 0;
 
 void show_list(){
     printf("0....Exit\n");
@@ -24,7 +24,7 @@ void show_list(){
 
 void View(int* ar){
     printf("Current elements are: ");
-    for(int i=1; i<=n; i++) printf("%d ", ar[i]);
+    for(i=1; i<=n; i++) printf("%d ", ar[i]);
     printf("\n");
 }
 
@@ -40,7 +40,7 @@ void Search(int* ar){
     printf("Enter a data to be searched: ");
     int x;
     scanf("%d", &x);
-    for(int i=1; i<=n; i++){
+    for(i=1; i<=n; i++){
         if(x==ar[i]){
             printf("%d is found.\n", x);
             return;
@@ -53,7 +53,7 @@ void Delete(int* ar){
     printf("Enter a data to be deleted: ");
     int x, idx = 0;
     scanf("%d", &x);
-    for(int i=1; i<=n; i++){
+    for(i=1; i<=n; i++){
         if(x==ar[i]){
             idx = i;
             n--;
@@ -61,7 +61,7 @@ void Delete(int* ar){
         }
     }
     if(idx){
-        for(int i=idx; i<=n; i++){
+        for(i=idx; i<=n; i++){
             ar[i] = ar[i+1];
         }
         printf("%d is deleted successfully!\n", x);
@@ -70,8 +70,8 @@ void Delete(int* ar){
 }
 
 void Sort_asc(int* ar){
-    for(int i=1; i<=n; i++){
-        for(int j=i+1; j<=n; j++){
+    for(i=1; i<=n; i++){
+        for(j=i+1; j<=n; j++){
             if(ar[i]>ar[j]){
                 int temp = ar[i];
                 ar[i] = ar[j];
@@ -83,8 +83,8 @@ void Sort_asc(int* ar){
 }
 
 void Sort_des(int* ar){
-    for(int i=1; i<=n; i++){
-        for(int j=i+1; j<=n; j++){
+    for(i=1; i<=n; i++){
+        for(j=i+1; j<=n; j++){
             if(ar[i]<ar[j]){
                 int temp = ar[i];
                 ar[i] = ar[j];
@@ -129,9 +129,12 @@ int main()
 
     while(1){
         show_list();
+
         printf("Please, enter a valid keyword from the given list: ");
         scanf("%d", &cmd);
+
         if(cmd == 0) break;
+
         perform(arr);
         clear_screen();
     }
