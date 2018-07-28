@@ -100,7 +100,7 @@ void MemLoc(int* ar){
     int x;
     scanf("%d", &x);
     if(x<1 || x>n) printf("Sorry! No such index is present!\n");
-    else printf("Desired memory location is = %d\n", &ar[x]);
+    else printf("Desired memory location is = %d\n", ar+x+1);
 }
 
 void perform(int* ar){
