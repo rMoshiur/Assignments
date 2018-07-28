@@ -87,7 +87,7 @@ void MemLoc(int* ar){
     cout<<"Enter the index what for you want to know memory location: ";
     int x; cin>>x;
     if(x<1 || x>n) cout<<"Sorry! No such index is present!"<<endl;
-    else cout<<"Desired memory location is = "<<&ar[x]<<endl;
+    else cout<<"Desired memory location is = "<<ar+x+1<<endl;
 }
 
 void perform(int* ar){
